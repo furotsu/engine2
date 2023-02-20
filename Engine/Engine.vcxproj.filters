@@ -1,0 +1,1144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{05ee096e-2772-49b5-b54c-610e4028317f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{6f190467-579e-43f0-bba1-75561dc66a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{2ca5a884-40a2-4130-b561-c5f4869dfca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor">
+      <UniqueIdentifier>{0105c1e7-3fd3-4644-b6b6-f13324c6e5ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntityComponentSystem">
+      <UniqueIdentifier>{6b30c791-dbde-48fe-a7e2-dc4ab2c15ff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{acb74daa-e254-44f7-82db-0cb88694d81b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{5727df85-ff71-47b7-8c6a-7f343c35fd6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{311787d8-1f20-4ee1-85b4-717a15090adb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\shaders">
+      <UniqueIdentifier>{b0549427-d7e4-490b-83f8-4bb1fb313d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\textures">
+      <UniqueIdentifier>{4b8c3c76-fa70-433a-95d1-9378665894dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\assimp">
+      <UniqueIdentifier>{5d66e7eb-f63f-4124-8602-6bf6b4f97552}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\Singletones">
+      <UniqueIdentifier>{f8f5fded-6495-4e8d-8e5c-13205b6eea26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\models">
+      <UniqueIdentifier>{b1dccf73-68ec-49c1-a908-883369c89b78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\instances">
+      <UniqueIdentifier>{f050981a-e1b1-4cbf-8f5f-0561af9a1e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\components">
+      <UniqueIdentifier>{d1f9d156-f7a8-45a2-b1b3-be1a8c022738}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\quaternion.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\matrixAlg.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\utility.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\d3d.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debug.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\shader.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\textureLoader.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parallelExecutor.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transform.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\sky.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actor\assimpLoader.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\textureManager.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actor\modelManager.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\shaderManager.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\meshSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\triangleOctree.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\worldRay.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="src\transformSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vec3.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\opaque_instances.cpp">
+      <Filter>Actor\instances</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actor\emissive_instances.cpp">
+      <Filter>Actor\instances</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\texture.cpp">
+      <Filter>Actor\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actor\model.cpp">
+      <Filter>Actor\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\actor\mesh.cpp">
+      <Filter>Actor\components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lightSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lightSource.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\globals.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderTarget.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\postProcess.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\plane.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\depthStencil.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shadowSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\particleSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\random.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\smokeEmitter.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vec2.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\grassField.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\dissolution_instances.cpp">
+      <Filter>Actor\instances</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vegetationSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gBuffer.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decalSystem.cpp">
+      <Filter>Application\Singletones</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\disappearance_instances.cpp">
+      <Filter>Actor\instances</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\math\matrixAlg.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\quaternion.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\hitable.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\ray.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\utility.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\controller.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\application.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\window.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\shader.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timer.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\win.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\DxRes.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\d3d.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\camera.hpp">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transform.hpp">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\parallelExecutor.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\textureLoader.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\constants.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\sky.hpp">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor\assimpLoader.hpp">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\ZipArchiveIOSystem.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\SmallVector.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\SmoothingGroups.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\SpatialSort.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\StandardShapes.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\StreamReader.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\StreamWriter.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\StringComparison.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\StringUtils.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Subdivision.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\texture.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\TinyFormatter.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\types.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\vector2.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\vector3.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\version.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Vertex.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\XmlParser.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\XMLTools.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\SkeletonMeshBuilder.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\MathFunctions.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\matrix3x3.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\matrix4x4.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\MemoryIOWrapper.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\mesh.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\metadata.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\NullLogger.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\ParsingUtils.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\pbrmaterial.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Compiler\poppack1.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\postprocess.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Profiler.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\ProgressHandler.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Compiler\pstdint.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Compiler\pushpack1.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\qnan.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\quaternion.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\RemoveComments.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\scene.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\SceneCombiner.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\SGSpatialSort.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\CreateAnimMesh.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\DefaultIOStream.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\DefaultIOSystem.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\DefaultLogger.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Defines.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\defs.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Exceptional.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Exporter.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\fast_atof.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\GenericProperty.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Hash.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Importer.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\importerdesc.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\IOStream.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\IOStreamBuffer.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\IOSystem.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\light.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\LineSplitter.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\LogAux.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Logger.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\LogStream.hpp">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\material.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\config.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\aabb.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\ai_assert.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\port\AndroidJNI\AndroidJNIIOSystem.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\anim.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\BaseImporter.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\Bitmap.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\BlobIOSystem.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\port\AndroidJNI\BundledAssetIOSystem.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\ByteSwapper.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\camera.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\cexport.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\cfileio.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\cimport.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\ColladaMetaData.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\color4.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\assimp\commonMetaData.h">
+      <Filter>res\assimp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\textureManager.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor\modelManager.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\shaderManager.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\meshSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\transformSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\triangleOctree.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\box.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vec3.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\worldRay.hpp">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="src\solidVector.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\opaque_instances.hpp">
+      <Filter>Actor\instances</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor\emissive_instances.hpp">
+      <Filter>Actor\instances</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\texture.hpp">
+      <Filter>Actor\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\model.hpp">
+      <Filter>Actor\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor\mesh.hpp">
+      <Filter>Actor\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\actor\material.hpp">
+      <Filter>Actor\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lightSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lightSource.hpp">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\globals.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderTarget.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hlsl.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\postProcess.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plane.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\depthStencil.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shadowSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grass.hpp">
+      <Filter>Actor\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\grassField.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\smokeEmitter.hpp">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="src\particleSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\particle.hpp">
+      <Filter>Actor\components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\random.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vec2.hpp">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\poissonGenerator.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\dissolution_instances.hpp">
+      <Filter>Actor\instances</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vegetationSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gBuffer.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decalSystem.hpp">
+      <Filter>Application\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\disappearance_instances.hpp">
+      <Filter>Actor\instances</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\container2.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\cubemap.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Armor_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Armor_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Armor_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Armor_OpacityMask.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Armor_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Cape_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Cape_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Cape_OpacityMask.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Cape_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Eye_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Eye_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Fur_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Fur_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Fur_OpacityMask.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Fur_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Glove_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Glove_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Glove_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Glove_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Hand_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Hand_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Hand_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Head_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Head_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Head_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Head_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Head_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Head_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Helmet_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Helmet_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Helmet_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Helmet_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Helmet_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Helmet_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Helmet_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Helmet_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Horse_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Horse_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Horse_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Legs_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Legs_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Legs_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Legs_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Legs_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Legs_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Legs_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Legs_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Marble_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Skirt_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Skirt_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Skirt_OpacityMask.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Skirt_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Star_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Star_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Star_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Star_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Statue_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Statue_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Statue_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\StoneWork_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\StoneWork_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\StoneWork_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Sword_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Sword_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Sword_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Sword_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Tail_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Tail_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\dds\Tail_OpacityMask.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Torso_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Torso_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Torso_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Torso_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Torso_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Torso_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Knight\dds\Torso_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Samurai\dds\Torso_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Trims_BaseColor.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Trims_Metallic.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Trims_Normal.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\SunCityWall\dds\Trims_Roughness.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube2.fbm\container1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube2.fbm\container3.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube2.fbm\container1.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\container2.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube2.fbm\container2.dds">
+      <Filter>res\textures</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Albedo.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\smoke\DDS\Alpha.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\AO.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Armor_BaseColor.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Armor_Metallic.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Armor_Normal.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Armor_OpacityMask.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Armor_Roughness.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Armor_Specular.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\smoke\DDS\BotBF.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Bump.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Cavity.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube.fbm\Cube_brick_texture.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube.fbm\Cube_normal_texture.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube.fbm\Cube_roughness_texture.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\decalNormals.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Displacement.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\smoke\DDS\emission.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Gloss.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Horse_BaseColor.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Horse_Normal.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Horse_Roughness.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Horse_Specular.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\terrain\Mud_Albedo.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\terrain\Mud_Normal.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\terrain\Mud_Roughness.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\night_street.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\night_street_irradiance.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\night_street_reflection.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\noiseTexture.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\noiseTexture2.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Normal.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Opacity.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Opacity2.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\reflectance.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\smoke\DDS\RLT.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Roughness.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Specular.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube.fbm\Stone_COLOR.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube.fbm\Stone_NORM.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\Cube\cube.fbm\Stone_ROUGH.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Tail_BaseColor.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Tail_Normal.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\models\KnightHorse\tga\Tail_OpacityMask.TGA">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\PBR_grass\DDS\Translucency.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\skybox.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\globals.hlsli">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\opaque.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\emissive.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\resolve.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\shadowMap.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\decal.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\deferred.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\disappearance.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\disappearanceParticles.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\disappearanceParticlesUpdater.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\dissolution.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\grass.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\smokeParticle.hlsl">
+      <Filter>res\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\shadowMapDissolution.hlsl" />
+    <FxCompile Include="shaders\shadowMapDisappearance.hlsl" />
+    <FxCompile Include="shaders\deferredGrass.hlsl" />
+    <FxCompile Include="shaders\deferredEmissive.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\include\assimp\SmoothingGroups.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\vector2.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\vector3.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\matrix3x3.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\matrix4x4.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\quaternion.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\material.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="src\include\assimp\color4.inl">
+      <Filter>res\assimp</Filter>
+    </None>
+    <None Include="assets\models\KnightHorse\KnightHorse.fbx">
+      <Filter>res\models</Filter>
+    </None>
+    <None Include="assets\models\Knight\Knight.fbx">
+      <Filter>res\models</Filter>
+    </None>
+    <None Include="assets\models\SunCityWall\SunCityWall.fbx">
+      <Filter>res\models</Filter>
+    </None>
+    <None Include="assets\models\Samurai\Samurai.fbx">
+      <Filter>res\models</Filter>
+    </None>
+    <None Include="assets\models\Cube\cube2.fbx">
+      <Filter>res\models</Filter>
+    </None>
+    <None Include="shaders\pbrRes.hlsli">
+      <Filter>res\shaders</Filter>
+    </None>
+    <None Include="shaders\structures.hlsli">
+      <Filter>res\shaders</Filter>
+    </None>
+    <None Include="shaders\IBL.hlsli">
+      <Filter>res\shaders</Filter>
+    </None>
+    <None Include="assimp-vc142-mt.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\models\Cube\cube.blend">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\models\Cube\cube.fbx">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\models\KnightHorse\KnightHorse.blend">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="assets\models\KnightHorse\KnightHorse.blend1">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

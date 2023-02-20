@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9bb520b0-3cfe-4853-a2f1-afeb5624297b}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>
+    </IncludePath>
+    <LibraryPath>$(WindowsSDK_LibraryPath_x64);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>
+    </IncludePath>
+    <LibraryPath>$(WindowsSDK_LibraryPath_x64);$(LibraryPath)</LibraryPath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\src\actor;$(SolutionDir)Engine;$(SolutionDir)Engine\src\math;$(SolutionDir)Engine\src\render;$(SolutionDir)Engine\src\include;$(SolutionDir)Engine\src;%(AdditionalIncludeDirectories);C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>DXGI.lib;d3dcompiler.lib;User32.lib;d3d11.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Engine/res/lib;$(WindowsSDK_LibraryPath_x64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <EntryPointName>main</EntryPointName>
+      <ShaderType>Effect</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\src\actor;$(SolutionDir)Engine;$(SolutionDir)Engine\src\math;$(SolutionDir)Engine\src\render;$(SolutionDir)Engine\src\include;$(SolutionDir)Engine\src;$(SolutionDir)Engine\;%(AdditionalIncludeDirectories);C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>DXGI.lib;d3dcompiler.lib;User32.lib;d3d11.lib;assimp-vc142-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Engine/res/lib;$(WindowsSDK_LibraryPath_x64);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <EntryPointName>main</EntryPointName>
+      <ShaderType>Effect</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gBuffer.cpp" />
+    <ClCompile Include="src\grassField.cpp" />
+    <ClCompile Include="src\particleSystem.cpp" />
+    <ClCompile Include="src\random.cpp" />
+    <ClCompile Include="src\render\disappearance_instances.cpp" />
+    <ClCompile Include="src\decalSystem.cpp" />
+    <ClCompile Include="src\render\dissolution_instances.cpp" />
+    <ClCompile Include="src\smokeEmitter.cpp" />
+    <ClCompile Include="src\shadowSystem.cpp" />
+    <ClCompile Include="src\plane.cpp" />
+    <ClCompile Include="src\postProcess.cpp" />
+    <ClCompile Include="src\depthStencil.cpp" />
+    <ClCompile Include="src\meshSystem.cpp" />
+    <ClCompile Include="src\actor\emissive_instances.cpp" />
+    <ClCompile Include="src\lightSource.cpp" />
+    <ClCompile Include="src\lightSystem.cpp" />
+    <ClCompile Include="src\renderTarget.cpp" />
+    <ClCompile Include="src\actor\modelManager.cpp" />
+    <ClCompile Include="src\render\opaque_instances.cpp" />
+    <ClCompile Include="src\render\shaderManager.cpp" />
+    <ClCompile Include="src\render\sky.cpp" />
+    <ClCompile Include="src\actor\assimpLoader.cpp" />
+    <ClCompile Include="src\math\matrixAlg.cpp" />
+    <ClCompile Include="src\math\quaternion.cpp" />
+    <ClCompile Include="src\math\utility.cpp" />
+    <ClCompile Include="src\render\d3d.cpp" />
+    <ClCompile Include="src\render\globals.cpp" />
+    <ClCompile Include="src\render\shader.cpp" />
+    <ClCompile Include="src\render\texture.cpp" />
+    <ClCompile Include="src\render\textureLoader.cpp" />
+    <ClCompile Include="src\render\textureManager.cpp" />
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\actor\mesh.cpp" />
+    <ClCompile Include="src\actor\model.cpp" />
+    <ClCompile Include="src\application.cpp" />
+    <ClCompile Include="src\controller.cpp" />
+    <ClCompile Include="src\debug.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\parallelExecutor.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+    <ClCompile Include="src\transform.cpp" />
+    <ClCompile Include="src\window.cpp" />
+    <ClCompile Include="src\transformSystem.cpp" />
+    <ClCompile Include="src\triangleOctree.cpp" />
+    <ClCompile Include="src\vec3.cpp" />
+    <ClCompile Include="src\worldRay.cpp" />
+    <ClCompile Include="src\vec2.cpp" />
+    <ClCompile Include="src\vegetationSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gBuffer.hpp" />
+    <ClInclude Include="src\grass.hpp" />
+    <ClInclude Include="src\grassField.hpp" />
+    <ClInclude Include="src\particle.hpp" />
+    <ClInclude Include="src\particleSystem.hpp" />
+    <ClInclude Include="src\poissonGenerator.hpp" />
+    <ClInclude Include="src\random.hpp" />
+    <ClInclude Include="src\render\disappearance_instances.hpp" />
+    <ClInclude Include="src\decalSystem.hpp" />
+    <ClInclude Include="src\render\dissolution_instances.hpp" />
+    <ClInclude Include="src\smokeEmitter.hpp" />
+    <ClInclude Include="src\shadowSystem.hpp" />
+    <ClInclude Include="src\hlsl.hpp" />
+    <ClInclude Include="src\plane.hpp" />
+    <ClInclude Include="src\postProcess.hpp" />
+    <ClInclude Include="src\box.hpp" />
+    <ClInclude Include="src\actor\emissive_instances.hpp" />
+    <ClInclude Include="src\depthStencil.hpp" />
+    <ClInclude Include="src\lightSource.hpp" />
+    <ClInclude Include="src\lightSystem.hpp" />
+    <ClInclude Include="src\renderTarget.hpp" />
+    <ClInclude Include="src\solidVector.hpp" />
+    <ClInclude Include="src\worldRay.hpp" />
+    <ClInclude Include="src\include\assimp\aabb.h" />
+    <ClInclude Include="src\include\assimp\ai_assert.h" />
+    <ClInclude Include="src\include\assimp\anim.h" />
+    <ClInclude Include="src\include\assimp\BaseImporter.h" />
+    <ClInclude Include="src\include\assimp\Bitmap.h" />
+    <ClInclude Include="src\include\assimp\BlobIOSystem.h" />
+    <ClInclude Include="src\include\assimp\ByteSwapper.h" />
+    <ClInclude Include="src\include\assimp\camera.h" />
+    <ClInclude Include="src\include\assimp\cexport.h" />
+    <ClInclude Include="src\include\assimp\cfileio.h" />
+    <ClInclude Include="src\include\assimp\cimport.h" />
+    <ClInclude Include="src\include\assimp\ColladaMetaData.h" />
+    <ClInclude Include="src\include\assimp\color4.h" />
+    <ClInclude Include="src\include\assimp\commonMetaData.h" />
+    <ClInclude Include="src\include\assimp\Compiler\poppack1.h" />
+    <ClInclude Include="src\include\assimp\Compiler\pstdint.h" />
+    <ClInclude Include="src\include\assimp\Compiler\pushpack1.h" />
+    <ClInclude Include="src\include\assimp\config.h" />
+    <ClInclude Include="src\include\assimp\CreateAnimMesh.h" />
+    <ClInclude Include="src\include\assimp\DefaultIOStream.h" />
+    <ClInclude Include="src\include\assimp\DefaultIOSystem.h" />
+    <ClInclude Include="src\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="src\include\assimp\Defines.h" />
+    <ClInclude Include="src\include\assimp\defs.h" />
+    <ClInclude Include="src\include\assimp\Exceptional.h" />
+    <ClInclude Include="src\include\assimp\Exporter.hpp" />
+    <ClInclude Include="src\include\assimp\fast_atof.h" />
+    <ClInclude Include="src\include\assimp\GenericProperty.h" />
+    <ClInclude Include="src\include\assimp\Hash.h" />
+    <ClInclude Include="src\include\assimp\Importer.hpp" />
+    <ClInclude Include="src\include\assimp\importerdesc.h" />
+    <ClInclude Include="src\include\assimp\IOStream.hpp" />
+    <ClInclude Include="src\include\assimp\IOStreamBuffer.h" />
+    <ClInclude Include="src\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="src\include\assimp\light.h" />
+    <ClInclude Include="src\include\assimp\LineSplitter.h" />
+    <ClInclude Include="src\include\assimp\LogAux.h" />
+    <ClInclude Include="src\include\assimp\Logger.hpp" />
+    <ClInclude Include="src\include\assimp\LogStream.hpp" />
+    <ClInclude Include="src\include\assimp\material.h" />
+    <ClInclude Include="src\include\assimp\MathFunctions.h" />
+    <ClInclude Include="src\include\assimp\matrix3x3.h" />
+    <ClInclude Include="src\include\assimp\matrix4x4.h" />
+    <ClInclude Include="src\include\assimp\MemoryIOWrapper.h" />
+    <ClInclude Include="src\include\assimp\mesh.h" />
+    <ClInclude Include="src\include\assimp\metadata.h" />
+    <ClInclude Include="src\include\assimp\NullLogger.hpp" />
+    <ClInclude Include="src\include\assimp\ParsingUtils.h" />
+    <ClInclude Include="src\include\assimp\pbrmaterial.h" />
+    <ClInclude Include="src\include\assimp\port\AndroidJNI\AndroidJNIIOSystem.h" />
+    <ClInclude Include="src\include\assimp\port\AndroidJNI\BundledAssetIOSystem.h" />
+    <ClInclude Include="src\include\assimp\postprocess.h" />
+    <ClInclude Include="src\include\assimp\Profiler.h" />
+    <ClInclude Include="src\include\assimp\ProgressHandler.hpp" />
+    <ClInclude Include="src\include\assimp\qnan.h" />
+    <ClInclude Include="src\include\assimp\quaternion.h" />
+    <ClInclude Include="src\include\assimp\RemoveComments.h" />
+    <ClInclude Include="src\include\assimp\scene.h" />
+    <ClInclude Include="src\include\assimp\SceneCombiner.h" />
+    <ClInclude Include="src\include\assimp\SGSpatialSort.h" />
+    <ClInclude Include="src\include\assimp\SkeletonMeshBuilder.h" />
+    <ClInclude Include="src\include\assimp\SmallVector.h" />
+    <ClInclude Include="src\include\assimp\SmoothingGroups.h" />
+    <ClInclude Include="src\include\assimp\SpatialSort.h" />
+    <ClInclude Include="src\include\assimp\StandardShapes.h" />
+    <ClInclude Include="src\include\assimp\StreamReader.h" />
+    <ClInclude Include="src\include\assimp\StreamWriter.h" />
+    <ClInclude Include="src\include\assimp\StringComparison.h" />
+    <ClInclude Include="src\include\assimp\StringUtils.h" />
+    <ClInclude Include="src\include\assimp\Subdivision.h" />
+    <ClInclude Include="src\include\assimp\texture.h" />
+    <ClInclude Include="src\include\assimp\TinyFormatter.h" />
+    <ClInclude Include="src\include\assimp\types.h" />
+    <ClInclude Include="src\include\assimp\vector2.h" />
+    <ClInclude Include="src\include\assimp\vector3.h" />
+    <ClInclude Include="src\include\assimp\version.h" />
+    <ClInclude Include="src\include\assimp\Vertex.h" />
+    <ClInclude Include="src\include\assimp\XmlParser.h" />
+    <ClInclude Include="src\include\assimp\XMLTools.h" />
+    <ClInclude Include="src\include\assimp\ZipArchiveIOSystem.h" />
+    <ClInclude Include="src\include\win.hpp" />
+    <ClInclude Include="src\meshSystem.hpp" />
+    <ClInclude Include="src\actor\material.hpp" />
+    <ClInclude Include="src\math\hitable.hpp" />
+    <ClInclude Include="src\math\matrixAlg.hpp" />
+    <ClInclude Include="src\math\quaternion.hpp" />
+    <ClInclude Include="src\math\ray.hpp" />
+    <ClInclude Include="src\math\utility.hpp" />
+    <ClInclude Include="src\actor\modelManager.hpp" />
+    <ClInclude Include="src\render\d3d.hpp" />
+    <ClInclude Include="src\render\DxRes.hpp" />
+    <ClInclude Include="src\render\globals.hpp" />
+    <ClInclude Include="src\render\opaque_instances.hpp" />
+    <ClInclude Include="src\render\model.hpp" />
+    <ClInclude Include="src\render\shader.hpp" />
+    <ClInclude Include="src\render\shaderManager.hpp" />
+    <ClInclude Include="src\render\sky.hpp" />
+    <ClInclude Include="src\render\texture.hpp" />
+    <ClInclude Include="src\render\textureLoader.hpp" />
+    <ClInclude Include="src\render\textureManager.hpp" />
+    <ClInclude Include="src\actor\assimpLoader.hpp" />
+    <ClInclude Include="src\camera.hpp" />
+    <ClInclude Include="src\transform.hpp" />
+    <ClInclude Include="src\actor\mesh.hpp" />
+    <ClInclude Include="src\application.hpp" />
+    <ClInclude Include="src\constants.hpp" />
+    <ClInclude Include="src\controller.hpp" />
+    <ClInclude Include="src\debug.hpp" />
+    <ClInclude Include="src\parallelExecutor.hpp" />
+    <ClInclude Include="src\renderer.hpp" />
+    <ClInclude Include="src\timer.hpp" />
+    <ClInclude Include="src\window.hpp" />
+    <ClInclude Include="src\transformSystem.hpp" />
+    <ClInclude Include="src\triangleOctree.hpp" />
+    <ClInclude Include="src\vec3.hpp" />
+    <ClInclude Include="src\vec2.hpp" />
+    <ClInclude Include="src\vegetationSystem.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\container2.dds" />
+    <Image Include="assets\cubemap.dds" />
+    <Image Include="assets\decalNormals.dds" />
+    <Image Include="assets\models\Cube\container2.dds" />
+    <Image Include="assets\models\Cube\cube.fbm\Cube_brick_texture.dds" />
+    <Image Include="assets\models\Cube\cube.fbm\Cube_normal_texture.dds" />
+    <Image Include="assets\models\Cube\cube.fbm\Cube_roughness_texture.dds" />
+    <Image Include="assets\models\Cube\cube.fbm\Stone_COLOR.dds" />
+    <Image Include="assets\models\Cube\cube.fbm\Stone_NORM.dds" />
+    <Image Include="assets\models\Cube\cube.fbm\Stone_ROUGH.dds" />
+    <Image Include="assets\models\Cube\cube2.fbm\container1.dds" />
+    <Image Include="assets\models\Cube\cube2.fbm\container1.jpg" />
+    <Image Include="assets\models\Cube\cube2.fbm\container2.dds" />
+    <Image Include="assets\models\Cube\cube2.fbm\container3.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Armor_BaseColor.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Armor_Metallic.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Armor_Normal.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Armor_OpacityMask.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Armor_Roughness.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Horse_BaseColor.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Horse_Normal.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Horse_Roughness.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Tail_BaseColor.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Tail_Normal.dds" />
+    <Image Include="assets\models\KnightHorse\dds\Tail_OpacityMask.dds" />
+    <Image Include="assets\models\KnightHorse\tga\Armor_BaseColor.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Armor_Metallic.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Armor_Normal.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Armor_OpacityMask.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Armor_Roughness.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Armor_Specular.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Horse_BaseColor.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Horse_Normal.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Horse_Roughness.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Horse_Specular.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Tail_BaseColor.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Tail_Normal.TGA" />
+    <Image Include="assets\models\KnightHorse\tga\Tail_OpacityMask.TGA" />
+    <Image Include="assets\models\Knight\dds\Cape_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Cape_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Cape_OpacityMask.dds" />
+    <Image Include="assets\models\Knight\dds\Cape_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Eye_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Fur_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Fur_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Fur_OpacityMask.dds" />
+    <Image Include="assets\models\Knight\dds\Fur_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Glove_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Glove_Metallic.dds" />
+    <Image Include="assets\models\Knight\dds\Glove_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Glove_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Head_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Head_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Head_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Helmet_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Helmet_Metallic.dds" />
+    <Image Include="assets\models\Knight\dds\Helmet_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Helmet_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Legs_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Legs_Metallic.dds" />
+    <Image Include="assets\models\Knight\dds\Legs_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Legs_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Skirt_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Skirt_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Skirt_OpacityMask.dds" />
+    <Image Include="assets\models\Knight\dds\Skirt_Roughness.dds" />
+    <Image Include="assets\models\Knight\dds\Torso_BaseColor.dds" />
+    <Image Include="assets\models\Knight\dds\Torso_Metallic.dds" />
+    <Image Include="assets\models\Knight\dds\Torso_Normal.dds" />
+    <Image Include="assets\models\Knight\dds\Torso_Roughness.dds" />
+    <Image Include="assets\models\Samurai\dds\Eye_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Hand_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Hand_Normal.dds" />
+    <Image Include="assets\models\Samurai\dds\Hand_Roughness.dds" />
+    <Image Include="assets\models\Samurai\dds\Head_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Head_Normal.dds" />
+    <Image Include="assets\models\Samurai\dds\Head_Roughness.dds" />
+    <Image Include="assets\models\Samurai\dds\Helmet_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Helmet_Metallic.dds" />
+    <Image Include="assets\models\Samurai\dds\Helmet_Normal.dds" />
+    <Image Include="assets\models\Samurai\dds\Helmet_Roughness.dds" />
+    <Image Include="assets\models\Samurai\dds\Legs_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Legs_Metallic.dds" />
+    <Image Include="assets\models\Samurai\dds\Legs_Normal.dds" />
+    <Image Include="assets\models\Samurai\dds\Legs_Roughness.dds" />
+    <Image Include="assets\models\Samurai\dds\Sword_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Sword_Metallic.dds" />
+    <Image Include="assets\models\Samurai\dds\Sword_Normal.dds" />
+    <Image Include="assets\models\Samurai\dds\Sword_Roughness.dds" />
+    <Image Include="assets\models\Samurai\dds\Torso_BaseColor.dds" />
+    <Image Include="assets\models\Samurai\dds\Torso_Metallic.dds" />
+    <Image Include="assets\models\Samurai\dds\Torso_Normal.dds" />
+    <Image Include="assets\models\Samurai\dds\Torso_Roughness.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Marble_BaseColor.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Star_BaseColor.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Star_Metallic.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Star_Normal.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Star_Roughness.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Statue_BaseColor.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Statue_Normal.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Statue_Roughness.dds" />
+    <Image Include="assets\models\SunCityWall\dds\StoneWork_BaseColor.dds" />
+    <Image Include="assets\models\SunCityWall\dds\StoneWork_Normal.dds" />
+    <Image Include="assets\models\SunCityWall\dds\StoneWork_Roughness.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Trims_BaseColor.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Trims_Metallic.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Trims_Normal.dds" />
+    <Image Include="assets\models\SunCityWall\dds\Trims_Roughness.dds" />
+    <Image Include="assets\night_street.dds" />
+    <Image Include="assets\night_street_irradiance.dds" />
+    <Image Include="assets\night_street_reflection.dds" />
+    <Image Include="assets\noiseTexture.dds" />
+    <Image Include="assets\noiseTexture2.dds" />
+    <Image Include="assets\PBR_grass\DDS\Albedo.dds" />
+    <Image Include="assets\PBR_grass\DDS\AO.dds" />
+    <Image Include="assets\PBR_grass\DDS\Bump.dds" />
+    <Image Include="assets\PBR_grass\DDS\Cavity.dds" />
+    <Image Include="assets\PBR_grass\DDS\Displacement.dds" />
+    <Image Include="assets\PBR_grass\DDS\Gloss.dds" />
+    <Image Include="assets\PBR_grass\DDS\Normal.dds" />
+    <Image Include="assets\PBR_grass\DDS\Opacity.dds" />
+    <Image Include="assets\PBR_grass\DDS\Opacity2.dds" />
+    <Image Include="assets\PBR_grass\DDS\Roughness.dds" />
+    <Image Include="assets\PBR_grass\DDS\Specular.dds" />
+    <Image Include="assets\PBR_grass\DDS\Translucency.dds" />
+    <Image Include="assets\reflectance.dds" />
+    <Image Include="assets\smoke\DDS\Alpha.dds" />
+    <Image Include="assets\smoke\DDS\BotBF.dds" />
+    <Image Include="assets\smoke\DDS\emission.dds" />
+    <Image Include="assets\smoke\DDS\RLT.dds" />
+    <Image Include="assets\terrain\Mud_Albedo.dds" />
+    <Image Include="assets\terrain\Mud_Normal.dds" />
+    <Image Include="assets\terrain\Mud_Roughness.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\decal.hlsl" />
+    <FxCompile Include="shaders\deferred.hlsl" />
+    <FxCompile Include="shaders\deferredEmissive.hlsl" />
+    <FxCompile Include="shaders\deferredGrass.hlsl" />
+    <FxCompile Include="shaders\disappearance.hlsl" />
+    <FxCompile Include="shaders\disappearanceParticles.hlsl" />
+    <FxCompile Include="shaders\disappearanceParticlesUpdater.hlsl" />
+    <FxCompile Include="shaders\dissolution.hlsl" />
+    <FxCompile Include="shaders\emissive.hlsl" />
+    <FxCompile Include="shaders\grass.hlsl" />
+    <FxCompile Include="shaders\opaque.hlsl" />
+    <FxCompile Include="shaders\globals.hlsli" />
+    <FxCompile Include="shaders\resolve.hlsl" />
+    <FxCompile Include="shaders\shadowMap.hlsl" />
+    <FxCompile Include="shaders\shadowMapDisappearance.hlsl" />
+    <FxCompile Include="shaders\shadowMapDissolution.hlsl" />
+    <FxCompile Include="shaders\skybox.hlsl" />
+    <FxCompile Include="shaders\smokeParticle.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\models\Cube\cube.blend" />
+    <None Include="assets\models\Cube\cube.fbx" />
+    <None Include="assets\models\Cube\cube2.fbx" />
+    <None Include="assets\models\KnightHorse\KnightHorse.blend" />
+    <None Include="assets\models\KnightHorse\KnightHorse.blend1" />
+    <None Include="assets\models\KnightHorse\KnightHorse.fbx" />
+    <None Include="assets\models\Knight\Knight.fbx" />
+    <None Include="assets\models\Samurai\Samurai.fbx" />
+    <None Include="assets\models\SunCityWall\SunCityWall.fbx" />
+    <None Include="assimp-vc142-mt.dll" />
+    <None Include="shaders\IBL.hlsli" />
+    <None Include="shaders\pbrRes.hlsli" />
+    <None Include="shaders\structures.hlsli" />
+    <None Include="src\include\assimp\color4.inl" />
+    <None Include="src\include\assimp\material.inl" />
+    <None Include="src\include\assimp\matrix3x3.inl" />
+    <None Include="src\include\assimp\matrix4x4.inl" />
+    <None Include="src\include\assimp\quaternion.inl" />
+    <None Include="src\include\assimp\SmoothingGroups.inl" />
+    <None Include="src\include\assimp\vector2.inl" />
+    <None Include="src\include\assimp\vector3.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
