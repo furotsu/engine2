@@ -166,8 +166,13 @@
     </FxCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\depthStencil.cpp" />
     <ClCompile Include="src\gBuffer.cpp" />
     <ClCompile Include="src\grassField.cpp" />
+    <ClCompile Include="src\lighting.cpp" />
+    <ClCompile Include="src\math\plane.cpp" />
+    <ClCompile Include="src\math\sphere.cpp" />
+    <ClCompile Include="src\math\triangle.cpp" />
     <ClCompile Include="src\particleSystem.cpp" />
     <ClCompile Include="src\random.cpp" />
     <ClCompile Include="src\render\disappearance_instances.cpp" />
@@ -177,7 +182,6 @@
     <ClCompile Include="src\shadowSystem.cpp" />
     <ClCompile Include="src\plane.cpp" />
     <ClCompile Include="src\postProcess.cpp" />
-    <ClCompile Include="src\depthStencil.cpp" />
     <ClCompile Include="src\meshSystem.cpp" />
     <ClCompile Include="src\actor\emissive_instances.cpp" />
     <ClCompile Include="src\lightSource.cpp" />
@@ -216,9 +220,15 @@
     <ClCompile Include="src\vegetationSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\depthStencil.hpp" />
     <ClInclude Include="src\gBuffer.hpp" />
     <ClInclude Include="src\grass.hpp" />
     <ClInclude Include="src\grassField.hpp" />
+    <ClInclude Include="src\include\win_def.hpp" />
+    <ClInclude Include="src\include\win_undef.hpp" />
+    <ClInclude Include="src\math\plane.hpp" />
+    <ClInclude Include="src\math\sphere.hpp" />
+    <ClInclude Include="src\math\triangle.hpp" />
     <ClInclude Include="src\particle.hpp" />
     <ClInclude Include="src\particleSystem.hpp" />
     <ClInclude Include="src\poissonGenerator.hpp" />
@@ -226,6 +236,7 @@
     <ClInclude Include="src\render\disappearance_instances.hpp" />
     <ClInclude Include="src\decalSystem.hpp" />
     <ClInclude Include="src\render\dissolution_instances.hpp" />
+    <ClInclude Include="src\render\shaderIncluder.hpp" />
     <ClInclude Include="src\smokeEmitter.hpp" />
     <ClInclude Include="src\shadowSystem.hpp" />
     <ClInclude Include="src\hlsl.hpp" />
@@ -233,7 +244,6 @@
     <ClInclude Include="src\postProcess.hpp" />
     <ClInclude Include="src\box.hpp" />
     <ClInclude Include="src\actor\emissive_instances.hpp" />
-    <ClInclude Include="src\depthStencil.hpp" />
     <ClInclude Include="src\lightSource.hpp" />
     <ClInclude Include="src\lightSystem.hpp" />
     <ClInclude Include="src\renderTarget.hpp" />
@@ -493,26 +503,6 @@
     <Image Include="assets\terrain\Mud_Roughness.dds" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="shaders\decal.hlsl" />
-    <FxCompile Include="shaders\deferred.hlsl" />
-    <FxCompile Include="shaders\deferredEmissive.hlsl" />
-    <FxCompile Include="shaders\deferredGrass.hlsl" />
-    <FxCompile Include="shaders\disappearance.hlsl" />
-    <FxCompile Include="shaders\disappearanceParticles.hlsl" />
-    <FxCompile Include="shaders\disappearanceParticlesUpdater.hlsl" />
-    <FxCompile Include="shaders\dissolution.hlsl" />
-    <FxCompile Include="shaders\emissive.hlsl" />
-    <FxCompile Include="shaders\grass.hlsl" />
-    <FxCompile Include="shaders\opaque.hlsl" />
-    <FxCompile Include="shaders\globals.hlsli" />
-    <FxCompile Include="shaders\resolve.hlsl" />
-    <FxCompile Include="shaders\shadowMap.hlsl" />
-    <FxCompile Include="shaders\shadowMapDisappearance.hlsl" />
-    <FxCompile Include="shaders\shadowMapDissolution.hlsl" />
-    <FxCompile Include="shaders\skybox.hlsl" />
-    <FxCompile Include="shaders\smokeParticle.hlsl" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="assets\models\Cube\cube.blend" />
     <None Include="assets\models\Cube\cube.fbx" />
     <None Include="assets\models\Cube\cube2.fbx" />
@@ -523,10 +513,13 @@
     <None Include="assets\models\Samurai\Samurai.fbx" />
     <None Include="assets\models\SunCityWall\SunCityWall.fbx" />
     <None Include="assimp-vc142-mt.dll" />
+    <None Include="shaders\globals.hlsli" />
     <None Include="shaders\IBL.hlsli" />
     <None Include="shaders\pbrRes.hlsli" />
+    <None Include="shaders\shader.ush" />
     <None Include="shaders\structures.hlsli" />
     <None Include="src\include\assimp\color4.inl" />
+    <None Include="src\include\assimp\config.h.in" />
     <None Include="src\include\assimp\material.inl" />
     <None Include="src\include\assimp\matrix3x3.inl" />
     <None Include="src\include\assimp\matrix4x4.inl" />
@@ -534,6 +527,26 @@
     <None Include="src\include\assimp\SmoothingGroups.inl" />
     <None Include="src\include\assimp\vector2.inl" />
     <None Include="src\include\assimp\vector3.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\decal.hlsl" />
+    <FxCompile Include="shaders\deferred.hlsl" />
+    <FxCompile Include="shaders\deferredEmissive.hlsl" />
+    <FxCompile Include="shaders\deferredGrass.hlsl" />
+    <FxCompile Include="shaders\depthMinSample.hlsl" />
+    <FxCompile Include="shaders\disappearance.hlsl" />
+    <FxCompile Include="shaders\disappearanceParticles.hlsl" />
+    <FxCompile Include="shaders\disappearanceParticlesUpdater.hlsl" />
+    <FxCompile Include="shaders\dissolution.hlsl" />
+    <FxCompile Include="shaders\emissive.hlsl" />
+    <FxCompile Include="shaders\grass.hlsl" />
+    <FxCompile Include="shaders\opaque.hlsl" />
+    <FxCompile Include="shaders\resolve.hlsl" />
+    <FxCompile Include="shaders\shadowMap.hlsl" />
+    <FxCompile Include="shaders\shadowMapDisappearance.hlsl" />
+    <FxCompile Include="shaders\shadowMapDissolution.hlsl" />
+    <FxCompile Include="shaders\skybox.hlsl" />
+    <FxCompile Include="shaders\smokeParticle.hlsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

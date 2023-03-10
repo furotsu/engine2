@@ -456,7 +456,7 @@ namespace engine
 		rotation.r[3] = XMVectorSet(0.0f, 0.0f, 0.0f, 1.0f);
 		rotation = XMMatrixTranspose(rotation);
 
-		XMMATRIX matrix = XMMatrixMultiply(XMMatrixScaling(size.x, size.y, size.z), rotation);
+		XMMATRIX matrix = XMMatrixScaling(size.x, size.y, size.z);
 
 		knightPositions[0].push_back({ TransformSystem::GetInstance()->addTransform(XMMatrixMultiply(matrix, XMMatrixTranslation(position.x, position.y, position.z))), m_timePoint});
 

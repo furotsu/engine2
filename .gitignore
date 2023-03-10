@@ -360,18 +360,4 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
-FodyWeavers.xsd
-/Engine/assets/reflectance.dds
-/Engine/assets/night_street_reflection.dds
-/Engine/assets/night_street_irradiance.dds
-/Engine/assets/night_street.dds
-/Engine/src/depthStencil.hpp
-/Engine/src/depthStencil.cpp
-/Engine/shaders/structures.hlsli
-/Engine/shaders/shadowMap.hlsl
-/Engine/shaders/IBL.hlsli
-/Engine/assets/smoke/test_RLT_1.tga
-/Engine/assets/smoke/test_EMVA_2.tga
-/Engine/assets/smoke/test_EMVA_1.tga
-/Engine/assets/smoke/test_emission+scatter_1.tga
-/Engine/assets/smoke/test_BotBF_1.tga
+

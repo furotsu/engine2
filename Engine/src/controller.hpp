@@ -31,7 +31,6 @@ namespace engine
 		float m_deltaTime;
 		float m_timePoint;
 
-
 		Camera m_camera;
 		PostProcess m_postProcess;
 

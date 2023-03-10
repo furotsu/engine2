@@ -168,9 +168,6 @@
     <ClCompile Include="src\renderer.cpp">
       <Filter>render</Filter>
     </ClCompile>
-    <ClCompile Include="src\depthStencil.cpp">
-      <Filter>Application</Filter>
-    </ClCompile>
     <ClCompile Include="src\shadowSystem.cpp">
       <Filter>Application\Singletones</Filter>
     </ClCompile>
@@ -203,6 +200,21 @@
     </ClCompile>
     <ClCompile Include="src\render\disappearance_instances.cpp">
       <Filter>Actor\instances</Filter>
+    </ClCompile>
+    <ClCompile Include="src\depthStencil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\plane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\math\triangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lighting.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -581,9 +593,6 @@
     <ClInclude Include="src\renderer.hpp">
       <Filter>render</Filter>
     </ClInclude>
-    <ClInclude Include="src\depthStencil.hpp">
-      <Filter>Application</Filter>
-    </ClInclude>
     <ClInclude Include="src\shadowSystem.hpp">
       <Filter>Application\Singletones</Filter>
     </ClInclude>
@@ -625,6 +634,27 @@
     </ClInclude>
     <ClInclude Include="src\render\disappearance_instances.hpp">
       <Filter>Actor\instances</Filter>
+    </ClInclude>
+    <ClInclude Include="src\depthStencil.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\win_def.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\win_undef.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\plane.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\sphere.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\triangle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\shaderIncluder.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1029,54 +1059,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="shaders\skybox.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\globals.hlsli">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\opaque.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\emissive.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\resolve.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\shadowMap.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\decal.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\deferred.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\disappearance.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\disappearanceParticles.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\disappearanceParticlesUpdater.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\dissolution.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\grass.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\smokeParticle.hlsl">
-      <Filter>res\shaders</Filter>
-    </FxCompile>
-    <FxCompile Include="shaders\shadowMapDissolution.hlsl" />
-    <FxCompile Include="shaders\shadowMapDisappearance.hlsl" />
-    <FxCompile Include="shaders\deferredGrass.hlsl" />
-    <FxCompile Include="shaders\deferredEmissive.hlsl" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="src\include\assimp\SmoothingGroups.inl">
       <Filter>res\assimp</Filter>
     </None>
@@ -1116,15 +1098,6 @@
     <None Include="assets\models\Cube\cube2.fbx">
       <Filter>res\models</Filter>
     </None>
-    <None Include="shaders\pbrRes.hlsli">
-      <Filter>res\shaders</Filter>
-    </None>
-    <None Include="shaders\structures.hlsli">
-      <Filter>res\shaders</Filter>
-    </None>
-    <None Include="shaders\IBL.hlsli">
-      <Filter>res\shaders</Filter>
-    </None>
     <None Include="assimp-vc142-mt.dll">
       <Filter>Resource Files</Filter>
     </None>
@@ -1140,5 +1113,31 @@
     <None Include="assets\models\KnightHorse\KnightHorse.blend1">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="shaders\globals.hlsli" />
+    <None Include="shaders\IBL.hlsli" />
+    <None Include="shaders\pbrRes.hlsli" />
+    <None Include="shaders\shader.ush" />
+    <None Include="src\include\assimp\config.h.in" />
+    <None Include="shaders\structures.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\decal.hlsl" />
+    <FxCompile Include="shaders\deferred.hlsl" />
+    <FxCompile Include="shaders\deferredEmissive.hlsl" />
+    <FxCompile Include="shaders\deferredGrass.hlsl" />
+    <FxCompile Include="shaders\depthMinSample.hlsl" />
+    <FxCompile Include="shaders\disappearance.hlsl" />
+    <FxCompile Include="shaders\disappearanceParticles.hlsl" />
+    <FxCompile Include="shaders\disappearanceParticlesUpdater.hlsl" />
+    <FxCompile Include="shaders\dissolution.hlsl" />
+    <FxCompile Include="shaders\emissive.hlsl" />
+    <FxCompile Include="shaders\grass.hlsl" />
+    <FxCompile Include="shaders\opaque.hlsl" />
+    <FxCompile Include="shaders\resolve.hlsl" />
+    <FxCompile Include="shaders\shadowMap.hlsl" />
+    <FxCompile Include="shaders\shadowMapDisappearance.hlsl" />
+    <FxCompile Include="shaders\shadowMapDissolution.hlsl" />
+    <FxCompile Include="shaders\skybox.hlsl" />
+    <FxCompile Include="shaders\smokeParticle.hlsl" />
   </ItemGroup>
 </Project>
