@@ -169,10 +169,6 @@
     <ClCompile Include="src\depthStencil.cpp" />
     <ClCompile Include="src\gBuffer.cpp" />
     <ClCompile Include="src\grassField.cpp" />
-    <ClCompile Include="src\lighting.cpp" />
-    <ClCompile Include="src\math\plane.cpp" />
-    <ClCompile Include="src\math\sphere.cpp" />
-    <ClCompile Include="src\math\triangle.cpp" />
     <ClCompile Include="src\particleSystem.cpp" />
     <ClCompile Include="src\random.cpp" />
     <ClCompile Include="src\render\disappearance_instances.cpp" />
@@ -226,9 +222,6 @@
     <ClInclude Include="src\grassField.hpp" />
     <ClInclude Include="src\include\win_def.hpp" />
     <ClInclude Include="src\include\win_undef.hpp" />
-    <ClInclude Include="src\math\plane.hpp" />
-    <ClInclude Include="src\math\sphere.hpp" />
-    <ClInclude Include="src\math\triangle.hpp" />
     <ClInclude Include="src\particle.hpp" />
     <ClInclude Include="src\particleSystem.hpp" />
     <ClInclude Include="src\poissonGenerator.hpp" />
